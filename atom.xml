@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://aiaileen.github.io/"/>
-  <updated>2017-10-21T14:29:23.000Z</updated>
+  <updated>2017-10-21T15:29:23.000Z</updated>
   <id>http://aiaileen.github.io/</id>
   
   <author>
@@ -18,12 +18,12 @@
   
   <entry>
     <title>如何更改NTFS移动硬盘在MAC OS X下只读权限?</title>
-    <link href="http://aiaileen.github.io/2017/10/21/ReadOnlyHDD-mac/"/>
-    <id>http://aiaileen.github.io/2017/10/21/ReadOnlyHDD-mac/</id>
+    <link href="http://aiaileen.github.io/2017/10/21/ReadOnlyHDD-mac/2017-10-21-ReadOnlyHDD-mac/"/>
+    <id>http://aiaileen.github.io/2017/10/21/ReadOnlyHDD-mac/2017-10-21-ReadOnlyHDD-mac/</id>
     <published>2017-10-21T10:06:06.000Z</published>
-    <updated>2017-10-21T14:29:23.000Z</updated>
+    <updated>2017-10-21T15:29:23.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>移动硬盘在以前的Windows电脑可以正常使用，今天连在mac上，发现只能读，不能写。</p><p>谷歌了一圈，大多都推荐使用软件blabla。。<br>不过找到了个英文网站提供的方法，搬运过来。<br>既然不安装软件就可以改权限，为什么还要占空间安多余的软件嘞~</p><h2 id="具体做法："><a href="#具体做法：" class="headerlink" title="具体做法："></a>具体做法：</h2><ol><li>在Terminal（终端）中敲入如下指令<br> 然后键入密码，就进入一个空白的fstab文件啦。</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo nano /etc/fstab</div></pre></td></tr></table></figure><p>more</p><ol><li>在文件里敲入如下命令：<br> <strong>注意</strong>：这里NAME换成你的移动硬盘的名字，但是，如果有空格，要把空格换成\040（如下图）硬盘名称原来是Seagate Backup Plus Drive<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">LABEL=NAME none ntfs rw,auto,nobrowse</div></pre></td></tr></table></figure></li></ol><p><img src="WechatIMG67.jpeg" alt="fstab"></p><ol><li>编辑好后按^O(Ctr+O)保存，然后^X退出。<br> 然后发现硬盘不见了，不在桌面上了。。<br> 它在/Volumes文件夹下</li><li>在Finder里按下<code>command + shift + g</code>，在弹出的对话框里敲入<code>/Volumes</code>硬盘文件夹就在这个Volumes文件夹下<br><img src="WechatIMG68.jpeg" alt="gofolder"></li><li>这时打开就可以更改删除文件啦~<br> 记得用后弹出再拔呀~</li></ol><h6 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h6><p><em><a href="http://macdrug.com/write-ntfs-drive-macos-sierra/" target="_blank" rel="external">http://macdrug.com/write-ntfs-drive-macos-sierra/</a></em></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>移动硬盘在以前的Windows电脑可以正常使用，今天连在mac上，发现只能读，不能写。</p><p>谷歌了一圈，大多都推荐使用软件blabla。。<br>不过找到了个英文网站提供的方法，搬运过来。<br>既然不安装软件就可以改权限，为什么还要占空间安多余的软件嘞~</p><h2 id="具体做法："><a href="#具体做法：" class="headerlink" title="具体做法："></a>具体做法：</h2><ol><li>在Terminal（终端）中敲入如下指令<br> 然后键入密码，就进入一个空白的fstab文件啦。</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo nano /etc/fstab</div></pre></td></tr></table></figure><p>more</p><ol><li>在文件里敲入如下命令：<br> <strong>注意</strong>：这里NAME换成你的移动硬盘的名字，但是，如果有空格，要把空格换成\040（如下图）硬盘名称原来是Seagate Backup Plus Drive<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">LABEL=NAME none ntfs rw,auto,nobrowse</div></pre></td></tr></table></figure></li></ol><p><img src="WechatIMG67.jpeg =100x100" alt="fstab"></p><ol><li>编辑好后按^O(Ctr+O)保存，然后^X退出。<br> 然后发现硬盘不见了，不在桌面上了。。<br> 它在/Volumes文件夹下</li><li>在Finder里按下<code>command + shift + g</code>，在弹出的对话框里敲入<code>/Volumes</code>硬盘文件夹就在这个Volumes文件夹下<br><img src="WechatIMG68.jpeg" alt="gofolder"></li><li>这时打开就可以更改删除文件啦~<br> 记得用后弹出再拔呀~</li></ol><h6 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h6><p><em><a href="http://macdrug.com/write-ntfs-drive-macos-sierra/" target="_blank" rel="external">http://macdrug.com/write-ntfs-drive-macos-sierra/</a></em></p>]]></content>
     
     <summary type="html">
     
@@ -44,8 +44,8 @@
   
   <entry>
     <title>FridayNight</title>
-    <link href="http://aiaileen.github.io/2017/08/04/FridayNight/"/>
-    <id>http://aiaileen.github.io/2017/08/04/FridayNight/</id>
+    <link href="http://aiaileen.github.io/2017/08/04/FridayNight/2017-08-04-FridayNight/"/>
+    <id>http://aiaileen.github.io/2017/08/04/FridayNight/2017-08-04-FridayNight/</id>
     <published>2017-08-04T10:16:10.000Z</published>
     <updated>2017-10-21T12:22:19.000Z</updated>
     
@@ -69,8 +69,8 @@
   
   <entry>
     <title>First Class in UniMelb</title>
-    <link href="http://aiaileen.github.io/2017/07/24/First-Class-in-UniMelb/"/>
-    <id>http://aiaileen.github.io/2017/07/24/First-Class-in-UniMelb/</id>
+    <link href="http://aiaileen.github.io/2017/07/24/First-Class-in-UniMelb/2017-07-24-First-Class-in-UniMelb/"/>
+    <id>http://aiaileen.github.io/2017/07/24/First-Class-in-UniMelb/2017-07-24-First-Class-in-UniMelb/</id>
     <published>2017-07-24T11:47:09.000Z</published>
     <updated>2017-10-21T12:20:56.000Z</updated>
     
@@ -94,18 +94,18 @@
   
   <entry>
     <title>搬新家</title>
-    <link href="http://aiaileen.github.io/2017/07/24/NewHome/"/>
-    <id>http://aiaileen.github.io/2017/07/24/NewHome/</id>
+    <link href="http://aiaileen.github.io/2017/07/24/NewHome/2017-07-24-NewHome/"/>
+    <id>http://aiaileen.github.io/2017/07/24/NewHome/2017-07-24-NewHome/</id>
     <published>2017-07-23T15:04:40.000Z</published>
-    <updated>2017-10-21T12:25:27.000Z</updated>
+    <updated>2017-10-21T15:26:45.000Z</updated>
     
-    <content type="html"><![CDATA[<h5 id="折腾了一整天，终于搬完了。"><a href="#折腾了一整天，终于搬完了。" class="headerlink" title="折腾了一整天，终于搬完了。"></a>折腾了一整天，终于搬完了。</h5><h5 id="从3号来到猫本，已有半月有余，积攒的物件也不少。来来回回搬了三趟，然而还是把冰箱里的菜给忘了。。明天再去一趟。。"><a href="#从3号来到猫本，已有半月有余，积攒的物件也不少。来来回回搬了三趟，然而还是把冰箱里的菜给忘了。。明天再去一趟。。" class="headerlink" title="从3号来到猫本，已有半月有余，积攒的物件也不少。来来回回搬了三趟，然而还是把冰箱里的菜给忘了。。明天再去一趟。。"></a>从3号来到猫本，已有半月有余，积攒的物件也不少。来来回回搬了三趟，然而还是把冰箱里的菜给忘了。。明天再去一趟。。</h5><h5 id="于是我就住进了这个高大上的vision公寓。景色很好，尤其是晚上灯火闪烁，尽收眼底。"><a href="#于是我就住进了这个高大上的vision公寓。景色很好，尤其是晚上灯火闪烁，尽收眼底。" class="headerlink" title="于是我就住进了这个高大上的vision公寓。景色很好，尤其是晚上灯火闪烁，尽收眼底。"></a>于是我就住进了这个高大上的vision公寓。景色很好，尤其是晚上灯火闪烁，尽收眼底。</h5><p><img src="IMG_20170724_004551.jpg" alt="新家风景"></p><p>#####刚刚用手机拍了一张，还可以。</p><p>#####今天又早睡失败。。明天还要早起去享受高大上公寓的泳池和健身房哈哈哈哈</p><p>#####不过明天一整天都要外食了。心疼钱包。。。奈何维妈每逢周一休息呢</p><p>#####开学啦，加油吧！</p><p>#####Go Fighting!</p>]]></content>
+    <content type="html"><![CDATA[<h6 id="折腾了一整天，终于搬完了。"><a href="#折腾了一整天，终于搬完了。" class="headerlink" title="折腾了一整天，终于搬完了。"></a>折腾了一整天，终于搬完了。</h6><h6 id="从3号来到猫本，已有半月有余，积攒的物件也不少。来来回回搬了三趟，然而还是把冰箱里的菜给忘了。。明天再去一趟。。"><a href="#从3号来到猫本，已有半月有余，积攒的物件也不少。来来回回搬了三趟，然而还是把冰箱里的菜给忘了。。明天再去一趟。。" class="headerlink" title="从3号来到猫本，已有半月有余，积攒的物件也不少。来来回回搬了三趟，然而还是把冰箱里的菜给忘了。。明天再去一趟。。"></a>从3号来到猫本，已有半月有余，积攒的物件也不少。来来回回搬了三趟，然而还是把冰箱里的菜给忘了。。明天再去一趟。。</h6><h6 id="于是我就住进了这个高大上的vision公寓。景色很好，尤其是晚上灯火闪烁，尽收眼底。"><a href="#于是我就住进了这个高大上的vision公寓。景色很好，尤其是晚上灯火闪烁，尽收眼底。" class="headerlink" title="于是我就住进了这个高大上的vision公寓。景色很好，尤其是晚上灯火闪烁，尽收眼底。"></a>于是我就住进了这个高大上的vision公寓。景色很好，尤其是晚上灯火闪烁，尽收眼底。</h6><p><img src="IMG_20170724_004551.jpg" alt="新家风景"></p><h6 id="刚刚用手机拍了一张，还可以。"><a href="#刚刚用手机拍了一张，还可以。" class="headerlink" title="刚刚用手机拍了一张，还可以。"></a>刚刚用手机拍了一张，还可以。</h6><h6 id="今天又早睡失败。。明天还要早起去享受高大上公寓的泳池和健身房哈哈哈哈"><a href="#今天又早睡失败。。明天还要早起去享受高大上公寓的泳池和健身房哈哈哈哈" class="headerlink" title="今天又早睡失败。。明天还要早起去享受高大上公寓的泳池和健身房哈哈哈哈"></a>今天又早睡失败。。明天还要早起去享受高大上公寓的泳池和健身房哈哈哈哈</h6><h6 id="不过明天一整天都要外食了。心疼钱包。。。奈何维妈每逢周一休息呢"><a href="#不过明天一整天都要外食了。心疼钱包。。。奈何维妈每逢周一休息呢" class="headerlink" title="不过明天一整天都要外食了。心疼钱包。。。奈何维妈每逢周一休息呢"></a>不过明天一整天都要外食了。心疼钱包。。。奈何维妈每逢周一休息呢</h6><h6 id="开学啦，加油吧！"><a href="#开学啦，加油吧！" class="headerlink" title="开学啦，加油吧！"></a>开学啦，加油吧！</h6><h6 id="Go-Fighting"><a href="#Go-Fighting" class="headerlink" title="Go Fighting!"></a>Go Fighting!</h6>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h5 id=&quot;折腾了一整天，终于搬完了。&quot;&gt;&lt;a href=&quot;#折腾了一整天，终于搬完了。&quot; class=&quot;headerlink&quot; title=&quot;折腾了一整天，终于搬完了。&quot;&gt;&lt;/a&gt;折腾了一整天，终于搬完了。&lt;/h5&gt;&lt;h5 id=&quot;从3号来到猫本，已有半月有余，积攒的物件也
+        &lt;h6 id=&quot;折腾了一整天，终于搬完了。&quot;&gt;&lt;a href=&quot;#折腾了一整天，终于搬完了。&quot; class=&quot;headerlink&quot; title=&quot;折腾了一整天，终于搬完了。&quot;&gt;&lt;/a&gt;折腾了一整天，终于搬完了。&lt;/h6&gt;&lt;h6 id=&quot;从3号来到猫本，已有半月有余，积攒的物件也
       
     
     </summary>
