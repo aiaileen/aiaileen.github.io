@@ -175,19 +175,19 @@
 <li>在Terminal（终端）中敲入如下指令<br> 然后键入密码，就进入一个空白的fstab文件啦。</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo nano /etc/fstab</div></pre></td></tr></table></figure>
-<p>more</p>
+<p>‘more’</p>
 <ol>
 <li>在文件里敲入如下命令：<br> <strong>注意</strong>：这里NAME换成你的移动硬盘的名字，但是，如果有空格，要把空格换成\040（如下图）硬盘名称原来是Seagate Backup Plus Drive<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">LABEL=NAME none ntfs rw,auto,nobrowse</div></pre></td></tr></table></figure>
 </li>
 </ol>
-<p><img src="WechatIMG67.png =100x100" alt="fstab"></p>
+<p><img src="WechatIMG67.png" alt="fstab"></p>
 <ol>
 <li>编辑好后按^O(Ctr+O)保存，然后^X退出。<br> 然后发现硬盘不见了，不在桌面上了。。<br> 它在/Volumes文件夹下</li>
 <li>在Finder里按下<code>command + shift + g</code>，在弹出的对话框里敲入<code>/Volumes</code>硬盘文件夹就在这个Volumes文件夹下<br><img src="WechatIMG68.jpg" alt="gofolder"></li>
 <li>这时打开就可以更改删除文件啦~<br> 记得用后弹出再拔呀~</li>
 </ol>
 <blockquote>
-<p>参考:<br><em><a href="http://macdrug.com/write-ntfs-drive-macos-sierra/" target="_blank" rel="external">http://macdrug.com/write-ntfs-drive-macos-sierra/</a></em></p>
+<p>参考:<br><a href="http://macdrug.com/write-ntfs-drive-macos-sierra/" target="_blank" rel="external">http://macdrug.com/write-ntfs-drive-macos-sierra/</a></p>
 </blockquote>
 
       
