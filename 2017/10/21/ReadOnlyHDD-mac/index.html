@@ -19,7 +19,7 @@
 <meta property="og:image" content="http://aiaileen.github.io/2017/10/21/ReadOnlyHDD-mac/3f3aa4c98ccdc6aece695d62510427e8_thumb.jpg">
 <meta property="og:image" content="http://aiaileen.github.io/2017/10/21/ReadOnlyHDD-mac/WechatIMG67.png">
 <meta property="og:image" content="http://aiaileen.github.io/2017/10/21/ReadOnlyHDD-mac/WechatIMG68.jpg">
-<meta property="og:updated_time" content="2017-11-02T02:09:40.000Z">
+<meta property="og:updated_time" content="2017-11-02T03:07:54.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何更改NTFS移动硬盘在MAC OS X下只读权限?">
 <meta name="twitter:description" content="前言移动硬盘在以前的Windows电脑可以正常使用，今天连在mac上，发现只能读，不能写。 谷歌了一圈，大多都推荐使用软件blabla。。不过找到了个英文网站提供的方法，搬运过来。既然不安装软件就可以改权限，为什么还要占空间安多余的软件嘞~">
@@ -190,8 +190,9 @@ var _hmt = _hmt || [];
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo nano /etc/fstab</div></pre></td></tr></table></figure>
 <h3 id="2-在文件里敲入如下命令："><a href="#2-在文件里敲入如下命令：" class="headerlink" title="2. 在文件里敲入如下命令："></a><strong>2. 在文件里敲入如下命令：</strong></h3><p>   <strong>注意</strong>：这里NAME换成你的移动硬盘的名字，但是，如果有空格，要把空格换成\040（如下图）硬盘名称原来是Seagate Backup Plus Drive</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">LABEL=NAME none ntfs rw,auto,nobrowse</div></pre></td></tr></table></figure>
-<p><img src="/2017/10/21/ReadOnlyHDD-mac/WechatIMG67.png" alt="fstab"></p>
-<h3 id="3-编辑好后按-O-Ctr-O-保存，然后-X退出。"><a href="#3-编辑好后按-O-Ctr-O-保存，然后-X退出。" class="headerlink" title="3. 编辑好后按^O(Ctr+O)保存，然后^X退出。"></a><strong>3. 编辑好后按^O(Ctr+O)保存，然后^X退出。</strong></h3><p>   然后发现硬盘不见了，不在桌面上了。。<br>    它在/Volumes文件夹下</p>
+<p><img src="/2017/10/21/ReadOnlyHDD-mac/WechatIMG67.png" width="50%" height="50%"></p>
+<pre><code>![fstab](2017-10-21-ReadOnlyHDD-mac/WechatIMG67.png)
+</code></pre><h3 id="3-编辑好后按-O-Ctr-O-保存，然后-X退出。"><a href="#3-编辑好后按-O-Ctr-O-保存，然后-X退出。" class="headerlink" title="3. 编辑好后按^O(Ctr+O)保存，然后^X退出。"></a><strong>3. 编辑好后按^O(Ctr+O)保存，然后^X退出。</strong></h3><p>   然后发现硬盘不见了，不在桌面上了。。<br>    它在/Volumes文件夹下</p>
 <h3 id="4-在Finder里按下command-shift-g，在弹出的对话框里敲入-Volumes硬盘文件夹就在这个Volumes文件夹下"><a href="#4-在Finder里按下command-shift-g，在弹出的对话框里敲入-Volumes硬盘文件夹就在这个Volumes文件夹下" class="headerlink" title="4. 在Finder里按下command + shift + g，在弹出的对话框里敲入/Volumes硬盘文件夹就在这个Volumes文件夹下"></a><strong>4. 在Finder里按下<code>command + shift + g</code>，在弹出的对话框里敲入<code>/Volumes</code>硬盘文件夹就在这个Volumes文件夹下</strong></h3><p><img src="/2017/10/21/ReadOnlyHDD-mac/WechatIMG68.jpg" alt="gofolder"></p>
 <h3 id="5-这时打开就可以更改删除文件啦"><a href="#5-这时打开就可以更改删除文件啦" class="headerlink" title="5. 这时打开就可以更改删除文件啦~"></a><strong>5. 这时打开就可以更改删除文件啦~</strong></h3><p>   记得用后弹出再拔呀~</p>
 <hr>
