@@ -179,17 +179,10 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="更换MySQL初始root密码"><a href="#更换MySQL初始root密码" class="headerlink" title="更换MySQL初始root密码"></a>更换MySQL初始root密码</h2><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>   Mac下使用刚刚安装完的MySQL Workbench的时候会弹出如下对话框，要求填写root密码..<br>   <img src="/2018/01/18/Change-MySQL-password-for-root/workbench.png" alt="readonly"></p>
-<p>###1. 停止MySQL Server服务</p>
-<p>   可是密码在哪里？ 是我们在安装的时候弹出的一个对话框，提示我们记录root密码，但事实上都会被我们安装软件急切的心情所忽略。<br>   因此，如何修改忘记的root密码呢？<br>   我们是可以在system preferences(系统偏好设置？)(就是屏幕左上角的小苹果)里面找到MySQL的状态<br><img src="/2018/01/18/Change-MySQL-password-for-root/SQL.png " width="75%" height="75%"><br>   <img src="/2018/01/18/Change-MySQL-password-for-root/SQL.png" alt="readonly"><br>   点击绿色running旁边的停止按钮，绿色会变成红色的stop。</p>
-<p>###2. 在Terminal(终端)中敲命令更改安全级别<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ cd /usr/local/mysql/bin</div><div class="line"></div><div class="line">$ sudo ./mysqld_safe --skip-grant-tables</div></pre></td></tr></table></figure></p>
-<p>输入电脑<strong>系统</strong>密码。</p>
-<p>###3. 新建Terminal窗口改root密码<br>新建一个Terminal窗口，键入如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$ cd /usr/local/mysql/bin </div><div class="line"></div><div class="line">$ ./mysql -u root </div><div class="line"></div><div class="line">$mysql&gt; FLUSH PRIVILEGES;</div><div class="line"></div><div class="line">$mysql&gt; ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED by &apos;你的新密码&apos;; </div><div class="line"></div><div class="line">$mysql&gt; EXIT</div></pre></td></tr></table></figure></p>
-<p>###4. 重启MySQL Server<br>在System Preferences里面，MySQL状态还原成绿色的running</p>
-<p>现在再打开Workbench输入新密码，现在就可以成功连接Server啦~</p>
-<hr>
-<p>参考：<br>感谢Sean</p>
-
+        <h2 id="更换MySQL初始root密码"><a href="#更换MySQL初始root密码" class="headerlink" title="更换MySQL初始root密码"></a>更换MySQL初始root密码</h2><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>   Mac下使用刚刚安装完的MySQL Workbench的时候会弹出如下对话框，要求填写root密码..<br><img src="/2018/01/18/Change-MySQL-password-for-root/workbench.png " width="75%" height="75%"><br>   可是密码在哪里？ 是我们在安装的时候弹出的一个对话框，提示我们记录root密码，但事实上都会被我们安装软件急切的心情所忽略。<br>   因此，如何修改忘记的root密码呢？<br></p>
+        
+          <a class="article-more-a" href="/2018/01/18/Change-MySQL-password-for-root/#more">more >></a>
+        
       
       
       
@@ -198,7 +191,29 @@ var _hmt = _hmt || [];
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">SQL, Mac</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
         <p class="article-more-link">
@@ -778,6 +793,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Diary</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SQL, Mac</a>
               </li>
              
               <li class="article-tag-list-item">
